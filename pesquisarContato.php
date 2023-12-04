@@ -1,7 +1,6 @@
-<h1>Listar Contatos</h1>
-
 <?php
   $valor = $_REQUEST['valor'];
+  print "<h1>Resultados para: '$valor'</h1>";
   $sql = "select * from contatos where nome like '%{$valor}%' or email like '%{$valor}%' or telefone like '%{$valor}%'";
 
   $res = $conn->query($sql);
